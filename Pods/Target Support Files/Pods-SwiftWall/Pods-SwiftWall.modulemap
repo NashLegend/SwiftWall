@@ -1,0 +1,6 @@
+framework module Pods_SwiftWall {
+  umbrella header "Pods-SwiftWall-umbrella.h"
+
+  export *
+  module * { export * }
+}
