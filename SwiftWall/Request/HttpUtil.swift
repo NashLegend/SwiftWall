@@ -11,14 +11,6 @@ import SwiftyJSON
 
 class HttpUtil {
     
-    static func get<T>(url:String,params:[String: String],parser:Parser<T>?,completionHandler: Response<T, NSError> -> Void){
-        Alamofire.request(.GET, url, parameters: params).response(responseSerializer: parser!.getParser(),completionHandler:completionHandler)
-    }
-    
-    static func post<T>(url:String,params:[String: String],parser:Parser<T>?,completionHandler: Response<T, NSError> -> Void){
-        Alamofire.request(.POST, url, parameters: params).response(responseSerializer: parser!.getParser(),completionHandler:completionHandler)
-    }
-    
 }
 
 

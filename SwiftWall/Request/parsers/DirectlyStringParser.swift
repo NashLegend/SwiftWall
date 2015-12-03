@@ -8,7 +8,7 @@
 import Alamofire
 
 class DirectlyStringParser: Parser<String> {
-    override func getParser() -> ResponseSerializer<String, NSError> {
+    override func getParser(responseObject:ResponseObject<String>) -> ResponseSerializer<String, NSError> {
         return ResponseSerializer { request, response, data, error in
             return .Failure(error! as NSError)
         }

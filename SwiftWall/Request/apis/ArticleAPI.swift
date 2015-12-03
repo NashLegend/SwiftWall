@@ -2,7 +2,7 @@
 //  ArticleAPI.swift
 //  SwiftWall
 //
-//  Created by xiaoge on 15/11/20.
+//  Created by NashLegend on 15/11/20.
 //  Copyright © 2015年 NashLegend. All rights reserved.
 //
 

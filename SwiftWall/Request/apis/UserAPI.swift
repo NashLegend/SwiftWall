@@ -1,8 +1,8 @@
 //
 //  UserAPI.swift
-//  Logon
+//  SwiftWall
 //
-//  Created by xiaoge on 15/11/19.
+//  Created by NashLegend on 15/11/19.
 //  Copyright © 2015年 NashLegend. All rights reserved.
 //
 

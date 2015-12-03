@@ -9,7 +9,7 @@ import Alamofire
 import SwiftyJSON
 
 class ArticleParser: Parser<Article> {
-    override func getParser() -> ResponseSerializer<Article, NSError> {
+    override func getParser(responseObject:ResponseObject<Article>) -> ResponseSerializer<Article, NSError> {
         return ResponseSerializer { request, response, data, error in
             
             guard error == nil else { return .Failure(error!) }

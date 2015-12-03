@@ -32,6 +32,7 @@
 		B237DB201C1055A200728A58 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237DB111C1055A200728A58 /* ResponseError.swift */; };
 		B237DB211C1055A200728A58 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237DB121C1055A200728A58 /* ResponseObject.swift */; };
 		B237DB221C1055A200728A58 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237DB131C1055A200728A58 /* Urls.swift */; };
+		B237DB281C105A6700728A58 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237DB271C105A6700728A58 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		B237DB111C1055A200728A58 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		B237DB121C1055A200728A58 /* ResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		B237DB131C1055A200728A58 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		B237DB271C105A6700728A58 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		B9008FFD7803B60844FEC66E /* Pods_SwiftWall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 		79FBBB5E1C0712E4009FA8E9 /* SwiftWall */ = {
 			isa = PBXGroup;
 			children = (
+				B237DB261C105A6700728A58 /* models */,
 				B237DB021C1055A200728A58 /* Request */,
 				79FBBB5F1C0712E4009FA8E9 /* AppDelegate.swift */,
 				79FBBB611C0712E4009FA8E9 /* FirstViewController.swift */,
@@ -223,6 +226,14 @@
 				B237DB0D1C1055A200728A58 /* StringParser.swift */,
 			);
 			path = parsers;
+			sourceTree = "<group>";
+		};
+		B237DB261C105A6700728A58 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				B237DB271C105A6700728A58 /* Article.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +432,7 @@
 				B237DB181C1055A200728A58 /* JsonHandler.swift in Sources */,
 				B237DB221C1055A200728A58 /* Urls.swift in Sources */,
 				B237DB1A1C1055A200728A58 /* DirectlyStringParser.swift in Sources */,
+				B237DB281C105A6700728A58 /* Article.swift in Sources */,
 				B237DB211C1055A200728A58 /* ResponseObject.swift in Sources */,
 				B237DB141C1055A200728A58 /* AppAPI.swift in Sources */,
 				79FBBB621C0712E4009FA8E9 /* FirstViewController.swift in Sources */,

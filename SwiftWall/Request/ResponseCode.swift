@@ -1,8 +1,8 @@
 //
 //  ResponseCode.swift
-//  Logon
+//  SwiftWall
 //
-//  Created by xiaoge on 15/12/2.
+//  Created by NashLegend on 15/12/2.
 //  Copyright © 2015年 NashLegend. All rights reserved.
 //
 
