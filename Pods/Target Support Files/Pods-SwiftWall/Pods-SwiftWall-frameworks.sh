@@ -85,11 +85,15 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-SwiftWall/Alamofire.framework"
+  install_framework "Pods-SwiftWall/MBProgressHUD.framework"
   install_framework "Pods-SwiftWall/SDWebImage.framework"
+  install_framework "Pods-SwiftWall/SnapKit.framework"
   install_framework "Pods-SwiftWall/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-SwiftWall/Alamofire.framework"
+  install_framework "Pods-SwiftWall/MBProgressHUD.framework"
   install_framework "Pods-SwiftWall/SDWebImage.framework"
+  install_framework "Pods-SwiftWall/SnapKit.framework"
   install_framework "Pods-SwiftWall/SwiftyJSON.framework"
 fi
