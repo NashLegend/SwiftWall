@@ -68,7 +68,7 @@ class RequestObject<T>{
     
     func get(url:String,params:[String: String],parser:Parser<T>?,completionHandler: Response<T, NSError> -> Void)->Request{
         if parser != nil && callBack != nil {
-            return Alamofire.request(.GET, url, parameters: params).response(responseSerializer: parser!.getParser(responseObject!),completionHandler:completionHandler)
+            return Alamofire.request(.GET, url, parameters: params).response(responseSerializer: parser!.getParser(&responseObject!),completionHandler:completionHandler)
         }else{
             return Alamofire.request(.GET, url, parameters: params)
         }
@@ -76,7 +76,7 @@ class RequestObject<T>{
     
     func post(url:String,params:[String: String],parser:Parser<T>?,completionHandler: Response<T, NSError> -> Void)->Request{
         if parser != nil && callBack != nil {
-            return Alamofire.request(.POST, url, parameters: params).response(responseSerializer: parser!.getParser(responseObject!),completionHandler:completionHandler)
+            return Alamofire.request(.POST, url, parameters: params).response(responseSerializer: parser!.getParser(&responseObject!),completionHandler:completionHandler)
         }else{
             return Alamofire.request(.POST, url, parameters: params)
         }
@@ -154,7 +154,7 @@ class RetryHandler<T> {
 		return responseObject.code != ResponseCode.TOKEN_INVALID
 		&& responseObject.code != ResponseCode.SEVER_MAINTAINING
 		&& crtTime < maxTimes
-        && (responseObject.statusCode<300||responseObject.statusCode>=500)
+        && (responseObject.httpCode<300||responseObject.httpCode>=500)
         && !terminated;
 }
 

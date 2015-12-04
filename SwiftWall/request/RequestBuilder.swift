@@ -2,7 +2,7 @@
 // RequestBuilder.swift
 // SwiftWall
 // 
-// Created by xiaoge on 15/12/2.
+// Created by NashLegend on 15/12/2.
 // Copyright © 2015年 NashLegend. All rights reserved.
 // 
 import Alamofire
@@ -23,7 +23,7 @@ class RequestBuilder<T> {
 	 * @param method
 	 * @return
 	 */
-	func setMethod(method: Method) -> RequestBuilder<T> {
+	func setMethod(method: Alamofire.Method) -> RequestBuilder<T> {
 		rbRequest.method = method;
 		return self;
 	}

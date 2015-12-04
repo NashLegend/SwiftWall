@@ -14,14 +14,13 @@
 import Foundation
 
 class ResponseObject<T> {
-    var requestObject:RequestObject<T>//一个ResponseObject必定有一个RequestObject
+    unowned var requestObject:RequestObject<T>//一个ResponseObject必定有一个RequestObject
     var ok:Bool = false
-    var statusCode = -1;//http code，200，201，302，304，404，500等
+    var httpCode = -1;//http code，200，201，302，304，404，500等
     var error:NSError?
     var error_type = ResponseError.UNKNOWN_ERROR;//请求错误，断网，服务器错误等等
     var error_message = "";//其他错误的error_message，如NPE
     var code = ResponseCode.NONE;//json中返回的code
-    var message = "";//json返回值中的message
     var result:T? //网络请求返回的结果(已经parse过的)
     
     init(request:RequestObject<T>){
@@ -36,11 +35,10 @@ class ResponseObject<T> {
     func copyPartFrom(object:ResponseObject) {
         requestObject = RequestObject<T>();
         requestObject.copyPartFrom(object.requestObject);
-        statusCode = object.statusCode;
+        httpCode = object.httpCode;
         error_type = object.error_type;
         error_message = object.error_message;
         code = object.code;
-        message = object.message;
     }
     
     func toString()->String {
@@ -50,11 +48,10 @@ class ResponseObject<T> {
     func dump()->String {
         var err = ""
         err+="ok:"+String(ok)+"\n";
-        err+="statusCode:"+String(statusCode)+"\n"
+        err+="statusCode:"+String(httpCode)+"\n"
         err+="error:"+String(error_type)+"\n"
         err+="error_message:"+error_message+"\n"
         err+="code:"+String(code)+"\n"
-        err+="message:"+message+"\n"
         err+="result:"+String(result)+"\n"
         err+="requestObject:\n"+requestObject.dump()
         return err
