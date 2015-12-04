@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Article {
+class Article:BaseModel {
     var id = "";
     var title = "";
     var url = "";

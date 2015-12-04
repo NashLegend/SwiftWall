@@ -24,9 +24,9 @@ class BooleanParser : Parser<Bool> {
             return .Failure(error)
         }
         let json = JSON(data: validData)
-        if let code = json["ok"].bool {
-            responseObject.code = Int(code)
-            if !code {
+        if let ok = json["ok"].bool {
+            responseObject.ok = ok
+            if !ok {
                 let failureReason = "Data could not be serialized. Input data was nil."
                 let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason) // TODO
                 return .Failure(error)
