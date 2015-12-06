@@ -55,6 +55,7 @@
 		3B78B57A1C133003009935C9 /* AnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B5791C133003009935C9 /* AnswerController.swift */; };
 		3B78B57C1C133065009935C9 /* ReplyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B57B1C133065009935C9 /* ReplyController.swift */; };
 		3B78B57E1C1330C0009935C9 /* PostReplyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78B57D1C1330C0009935C9 /* PostReplyController.swift */; };
+		3BE8CE381C140ED100752071 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8CE371C140ED100752071 /* R.generated.swift */; };
 		79FBBB601C0712E4009FA8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FBBB5F1C0712E4009FA8E9 /* AppDelegate.swift */; };
 		79FBBB691C0712E4009FA8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FBBB681C0712E4009FA8E9 /* Assets.xcassets */; };
 		79FBBB6C1C0712E4009FA8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FBBB6A1C0712E4009FA8E9 /* LaunchScreen.storyboard */; };
@@ -142,6 +143,7 @@
 		3B78B5791C133003009935C9 /* AnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerController.swift; sourceTree = "<group>"; };
 		3B78B57B1C133065009935C9 /* ReplyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyController.swift; sourceTree = "<group>"; };
 		3B78B57D1C1330C0009935C9 /* PostReplyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostReplyController.swift; sourceTree = "<group>"; };
+		3BE8CE371C140ED100752071 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		46ED5F4B3379B50B91273BD8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		59848FE712E1107EE88059A4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FBBB5C1C0712E4009FA8E9 /* SwiftWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 				B237DB701C118C6700728A58 /* request */,
 				B237DB261C105A6700728A58 /* models */,
 				79FBBB5F1C0712E4009FA8E9 /* AppDelegate.swift */,
+				3BE8CE371C140ED100752071 /* R.generated.swift */,
 				79FBBB681C0712E4009FA8E9 /* Assets.xcassets */,
 				79FBBB6A1C0712E4009FA8E9 /* LaunchScreen.storyboard */,
 				79FBBB6D1C0712E4009FA8E9 /* Info.plist */,
@@ -386,6 +389,7 @@
 			buildConfigurationList = 79FBBB861C0712E4009FA8E9 /* Build configuration list for PBXNativeTarget "SwiftWall" */;
 			buildPhases = (
 				CA3012FD3C95D90DC1B95BC8 /* Check Pods Manifest.lock */,
+				3BC3FB1C1C140C1000687E5A /* ShellScript */,
 				79FBBB581C0712E4009FA8E9 /* Sources */,
 				79FBBB591C0712E4009FA8E9 /* Frameworks */,
 				79FBBB5A1C0712E4009FA8E9 /* Resources */,
@@ -525,6 +529,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWall/Pods-SwiftWall-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3BC3FB1C1C140C1000687E5A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/SwiftWall\"";
+		};
 		8EEB6B47170A6264FB56D146 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -591,6 +608,7 @@
 				3B5ED0BA1C11F5DB00777104 /* ArticleItemView.swift in Sources */,
 				3B5ED0971C11E94400777104 /* Notice.swift in Sources */,
 				3B78B5761C132FC8009935C9 /* PostController.swift in Sources */,
+				3BE8CE381C140ED100752071 /* R.generated.swift in Sources */,
 				3B5ED0911C11E8C400777104 /* Basket.swift in Sources */,
 				B237DB851C118C6700728A58 /* BooleanParser.swift in Sources */,
 				B237DB8D1C118C6700728A58 /* ResponseCode.swift in Sources */,
@@ -706,7 +724,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -744,7 +762,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

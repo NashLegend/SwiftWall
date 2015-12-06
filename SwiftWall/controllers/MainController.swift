@@ -16,24 +16,24 @@ class MainController: UITabBarController {
         self.tabBar.barTintColor = UIColor.whiteColor()
         
         let articleTab = ArticleSetController()
-        articleTab.tabBarItem = UITabBarItem(title: "首页", image:  UIImage.Asset.Home.image , tag: 0)
-        let nav_cc = NavigationController(rootViewController: articleTab)
+        articleTab.tabBarItem = UITabBarItem(title: "科学人", image:  R.image.first , tag: 0)
+        
+        let postTab = PostSetController()
+        postTab.tabBarItem = UITabBarItem(title: "小组", image: R.image.second, tag: 1)
+        
+        let questionTab = QuestionSetController()
+        questionTab.tabBarItem = UITabBarItem(title: "问答", image: R.image.first, tag: 2)
+        
+        let profileTab = UserInfoController()
+        profileTab.tabBarItem = UITabBarItem(title: "我", image: R.image.second, tag: 2)
         
         
-        let bbsVC = CCPBBSViewController(navigatorURL: NSURL(string: "go/ccp/bbs")!, query: ["link":"http://www.cocoachina.com/bbs/3g/"])
-        bbsVC.tabBarItem = UITabBarItem(title: "论坛", image: UIImage.Asset.Bbs.image, tag: 1)
-        let nav_bbs = ZXNavigationController(rootViewController: bbsVC)
-        
-        self.chatController = CChatListViewController()
-        chatController.tabBarItem = UITabBarItem(title: "聊天", image: UIImage.Asset.TabbarChat.image, tag: 2)
-        let nav_chat = ZXNavigationController(rootViewController: chatController)
-        
-        let profileVC = CCProfileViewController()
-        profileVC.tabBarItem = UITabBarItem(title: "我", image: UIImage.Asset.TabbarProfile.image, tag: 2)
-        let nav_profile = ZXNavigationController(rootViewController: profileVC)
-        
-        
-        self.viewControllers = [nav_cc,nav_bbs,nav_chat,nav_profile]
+        self.viewControllers = [
+            NavigationController(rootViewController: articleTab),
+            NavigationController(rootViewController: postTab),
+            NavigationController(rootViewController: questionTab),
+            NavigationController(rootViewController: profileTab)
+        ]
         
     }
 }
