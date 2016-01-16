@@ -94,8 +94,10 @@ class RequestObject<T>{
 			&& !retryHandler!.isTerminated()
 			&& retryHandler!.shouldHandNotifier(e, responseObject: result)) {
 			if (retryHandler!.span > 0) {
-				//todo 间隔
-                requestAsync();
+                let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(retryHandler!.span) * Int64(NSEC_PER_MSEC))
+                dispatch_after(popTime, dispatch_get_main_queue(), { () -> Void in
+                    self.requestAsync()
+                })
 			} else {
 				requestAsync();
 			}
